@@ -1,14 +1,27 @@
 class RnaTranscription {
 
     String transcribe(String dnaStrand) {
-       String RNA = "";
-        if (dnaStrand.isEmpty())
-            return "";
-        RNA = dnaStrand.replace("G","C");
-		RNA = dnaStrand.replace("C","G");
-		RNA = dnaStrand.replace("T","A");
-		RNA = dnaStrand.replace("A","U");
-		return RNA;
-    }
+      	String RNA = "";
+      	for (int i=0; i < dnaStrand.length(); i++) {  
+	      	char dna=dnaStrand.charAt(i);
+	      	switch(dna) {
+	        	case 'G':
+	            	RNA+='C';
+	            	break;
+	         	case 'C':
+	            	RNA+='G';
+	            	break;
+	         	case 'T':
+	            	RNA+='A';
+	            	break;
+	         	case 'A':
+	            	RNA+='U';
+	            	break;
+	      }
+
+	   }
+
+	   return RNA;
+	}
 
 }
