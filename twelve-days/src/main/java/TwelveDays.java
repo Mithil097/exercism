@@ -24,7 +24,6 @@ class TwelveDays {
     
     String verse(int verseNumber) {
         String m = "";
-        
         m+=PartOne;
         m+=days[verseNumber - 1];
         m+=PartTwo;
@@ -38,7 +37,6 @@ class TwelveDays {
                 m+="and ";
             }
         }
-        
         m+=".\n";
         return m;
     }
